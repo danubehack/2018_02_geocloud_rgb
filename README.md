@@ -5,16 +5,21 @@
 
 ## Target user groups
 - Future ONDA DIAS platform users
--
+- 
 
 ## Methodology
 - Product location selection using ONDA Catalog API
 - Data preparations for further processing (GDAL tools)
-- Manual selection of 
+- Tiles selection for a cloudfree composite
+- Final Virtual Raster generation
+- Publication
 
+## Results
+### Copernicus data and platforms utilization
+- ONDA data storage for S2MSI2A
+- ONDA VPS hardware
+- ONDA Catalogue API
 
--vhodné dlaždice boli vyberané manuálne
--celkovo bolo vybratých 12 dlaždíc, ktoré bolo možné nakombinovať tak, aby bolo územie bezoblačné
--územie SR je v dvoch UTM pásmach 33 a 34, čo komplikovalo mergovanie dlaždíc
--dlaždice boli kombinované funkciu Build virtual raster. Toto bolo nutné robiť osobitne pre vrstvy ktoré sú v rovnakom SRS. Následne boli .vrt súbory exportované vo formáte .tiff so SRS 4326
--nasledne boli mergnute
+## Experienced problems
+- Ran out of "project" space during the dataset preparation (gdal_merge)
+- 
