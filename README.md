@@ -15,6 +15,10 @@
 - Publication
 
 ## Results
+### Overal
+- script to query ONDA catalogue API and return paths to BAND files defined by user (e.g. B2,B3,B4)
+- "cloudfree" RGB composite for Slovakia
+
 ### Copernicus data and platforms utilization
 - ONDA data storage for S2MSI2A
 - ONDA VPS hardware
