@@ -5,7 +5,8 @@
 
 ## Target user groups
 - Future ONDA DIAS platform users
-- 
+- Big data managers
+- Big data user products creators 
 
 ## Methodology
 - Product location selection using ONDA Catalog API
@@ -26,4 +27,4 @@
 
 ## Experienced problems
 - Ran out of "project" space during the dataset preparation (gdal_merge)
-- 
+- Perofrmance issues in browsing data in ENS mounted in VPS
