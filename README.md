@@ -1,4 +1,5 @@
 # Geocloud RGB for SK
+authors: Jakub Kocica, Tomas Kliment
 ## Motivation
 - test data, service and tools provided by ONDA DIAS provider
 - create a cloud free mosaic dataset from S2MSI2A products
