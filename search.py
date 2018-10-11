@@ -5,11 +5,13 @@ cloud = '30'
 top='10'
 baspath = "/mnt/data/"
 inputpath = "/home/klimeto/slovakeye/l2a"
+product = "MSIL2A"
 ap = argparse.ArgumentParser()
 ap.add_argument("-from",required=False,dest="from",help="e.g. 2018-08-01")
 ap.add_argument("-to",required=False,dest="to",help="e.g. 2018-09-01, default now")
 ap.add_argument("-bands",required=False,dest="bands",help="Bands to be filtered.", type=list)
 ap.add_argument("-wkt",required=False,dest="wkt",help="Spatial extend in WKT")
+ap.add_argument("-product",required=False,dest="product",help="Product type, e.g. MSIL2A")
 ap.add_argument("-cloud",required=False,dest="cloud",help="Cloud cover upper extent, e.g. 50")
 ap.add_argument("-mask",required=False,dest="mask",help="Mask", type=bool)
 args = vars(ap.parse_args())
@@ -33,11 +35,15 @@ if args['cloud']:
     CLOUD = args['cloud']
 else:
     CLOUD = cloud
+if args['product']:
+    PRODUCT = args['product']
+else:
+    PRODUCT = product
 if args['mask']:
     MASK = True
 else:
     MASK = False
-url = endpoint + "$search=%22((name:*MSIL2A*) AND cloudCoverPercentage:[0 TO "+CLOUD+"])" \
+url = endpoint + "$search=%22((name:*"+PRODUCT+"*) AND cloudCoverPercentage:[0 TO "+CLOUD+"])" \
       "%20AND%20((beginPosition:["+FROM+"T00:00:00.000Z%20TO%20"+TO+"T23:59:00.000Z]))%20AND%20" \
       "footprint:%22Intersects("+WKT+")%22%22&$orderby=creationDate%20asc&$format=json&$skip=0&$top=" + top
 print(url)
