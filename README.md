@@ -29,3 +29,8 @@ authors: Jakub Kocica, Tomas Kliment
 ## Experienced problems
 - Ran out of "project" space during the dataset preparation (gdal_merge)
 - Perofrmance issues in browsing data in ENS mounted in VPS
+
+## Sample usage
+```python
+python search.py -wkt 'POLYGON((17.66543704555818 48.47776455545619,18.55258304165193 48.47776455545619,18.55258304165193 48.08846410187011,17.66543704555818 48.08846410187011,17.66543704555818 48.47776455545619))' -cloud 50 -from 2018-10-01 -to 2018-10-10
+```
